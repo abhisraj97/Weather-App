@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }else{
       try{
       
-      const url = await `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=e19666e4245f6fa43d803a3fbd9f183e`;
+      const url = await `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid={key}`;
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
