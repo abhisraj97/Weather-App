@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerlink}}
+</head>
+<body>
+   {{>navbar}}
+    {{>weatherCom}}
+   {{>footer}}
+<script defer src="js/module.js"></script>
+<script>
+const d = new Date();
+let week = d.getDay()
+if (week==1)
+document.getElementById("day").innerText = 'Monday';
+else if (week==2)
+document.getElementById("day").innerText = "Tuesday";
+else if (week==3)
+document.getElementById("day").innerText = "Wednesday";
+else if(week==4)
+document.getElementById("day").innerText =' Thursday';
+else if(week==5)
+document.getElementById("day").innerText = 'Friday';
+else if(week==6)
+document.getElementById("day").innerText = 'Saturday';
+else if(week==7)
+document.getElementById("day").innerText = 'Sunday';
+else
+document.getElementById("day").innerText = day;
+
+
+let date = new Date().toLocaleDateString("de-DE");
+document.getElementById("today_date").innerText = date;
+</script>
+</body>
+
+</html>
